@@ -1,0 +1,3 @@
+select categoryname, (select count(*) from product p,category b where p.categoryid==b.id and b.categoryname==a.categoryname) count, round((select avg(unitprice) from product p,category b where p.categoryid==b.id and b.categoryname==a.categoryname),2) avg, (select min(unitprice) from product p,category b where p.categoryid==b.id and b.categoryname==a.categoryname) min, (select max(unitprice) from product p,category b where p.categoryid==b.id and b.categoryname==a.categoryname) max, (select sum(unitsonorder) from product p,category b where p.categoryid==b.id and b.categoryname==a.categoryname and unitsonorder >= 10) count2
+from category a
+order by a.id;
