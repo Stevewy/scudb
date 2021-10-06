@@ -1,3 +1,5 @@
 scudb homework
 
 王耀
+
+q10中，sqlite的group_concat不支持排序，但是mysql中支持排序，故该要求使用mysql可以达成要求而使用sqlite不能实现排序的要求
