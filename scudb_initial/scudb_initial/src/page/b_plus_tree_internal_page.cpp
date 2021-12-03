@@ -223,7 +223,6 @@ INDEX_TEMPLATE_ARGUMENTS
 void B_PLUS_TREE_INTERNAL_PAGE_TYPE::MoveAllTo(
     BPlusTreeInternalPage *recipient, int index_in_parent,
     BufferPoolManager *buffer_pool_manager) {
-    // �����Ȼ�ø��ڵ�ҳ��
     auto* page = buffer_pool_manager->FetchPage(GetParentPageId());
     if (page == nullptr){
         throw Exception(EXCEPTION_TYPE_INDEX,
