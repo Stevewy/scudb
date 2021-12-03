@@ -216,7 +216,6 @@ int B_PLUS_TREE_LEAF_PAGE_TYPE::RemoveAndDeleteRecord(
             high = mid - 1;
         }
         else {
-            // ɾ���ڵ�
             memmove((void*)(array + mid), array + mid + 1,static_cast<size_t>((GetSize() - mid - 1) * sizeof(MappingType)));
             IncreaseSize(-1);
             break;
